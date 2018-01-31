@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sika</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+        <div class="container" ng-app="sikaApp" ng-controller="sikaCtrl">
+            <div class="col1">
+                <h2>Pelaajan pisteet</h2>
+                <h2 class="blue points"> {{ playerPoints }} </h2>
+                <p><button id="player" ng-click="throwDicePlayer()">Heitä noppaa</button>
+                <p class="blue">Pelaajan voitot {{ playerWins }}</p>
+            </div>
+            <div class="col2">
+                <img id="image" src="img/{{statusImage}}.png">
+                <p>{{ statusText }}</p>
+            </div>
+            <div class="col3">
+                <h2>Tietokoneen pisteet</h2>
+                <h2 class="grey points"> {{ computerPoints }} </h2>
+                <p><button id="computer" ng-click="throwDiceComputer()">Koneen vuoro</button>
+                <p class="grey">Tietokoneen voitot {{ computerWins }}</p>
+            </div>
+        </div>
+    
+    
+    <script src="js/angular.min.js"></script>
+    <script src="js/sika.js"></script>
+    </body>
+</html>
